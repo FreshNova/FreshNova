@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FreshNova Services</title>
+<style>
+  body {font-family: Arial, sans-serif; margin:0; padding:0; scroll-behavior: smooth;}
+  header {background-color:#4CAF50; color:white; padding:20px; text-align:center; position:sticky; top:0; z-index:1000; box-shadow:0 2px 5px rgba(0,0,0,0.2);}
+  nav a {margin:0 15px; color:white; text-decoration:none; font-weight:bold;}
+  nav a:hover {text-decoration:underline;}
+  
+  /* Banner */
+  .banner {height:450px; display:flex; justify-content:center; align-items:center; color:white; font-size:2em; text-shadow:2px 2px 5px black; text-align:center; padding:0 20px; background-size:cover; background-position:center; transition: background-image 1s ease-in-out;}
+  
+  section {padding:60px 20px; text-align:center; opacity:0; transform:translateY(50px); transition: all 1s ease;}
+  section.visible {opacity:1; transform:translateY(0);}
+  
+  .services {display:flex; justify-content:space-around; flex-wrap:wrap; gap:20px;}
+  .service {width:300px; margin:20px auto; padding:20px; border:1px solid #ddd; border-radius:10px; box-shadow:0 0 15px rgba(0,0,0,0.1); transition: transform 0.3s;}
+  .service:hover {transform:translateY(-10px);}
+  .service h3 {color:#4CAF50;}
+  
+  .btn {background-color:#4CAF50; color:white; padding:12px 25px; border:none; border-radius:5px; cursor:pointer; font-size:1em; transition: background 0.3s;}
+  .btn:hover {background-color:#45a049;}
+  
+  form {max-width:500px; margin:auto; text-align:left;}
+  form input, form textarea {width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:5px;}
+  
+  footer {background:#333; color:white; padding:20px; text-align:center;}
+  .success-msg {display:none; color:green; font-weight:bold; margin-top:10px;}
+  
+  /* Logo */
+  .logo {max-width:180px; margin-bottom:10px;}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="https://i.imgur.com/3v9xQhG.png" alt="FreshNova Services Logo" class="logo">
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="banner" id="home">
+  <div>
+    <h2>Professional Cleaning, Healthy & Safe Environment</h2>
+    <button class="btn" onclick="document.getElementById('contact').scrollIntoView()">Book Now</button>
+  </div>
+</div>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>We provide top-notch cleaning services for homes and offices with high-quality standards at competitive prices. Our trained team ensures a clean and healthy environment.</p>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="service">
+      <h3>Home Cleaning</h3>
+      <img src="https://images.unsplash.com/photo-1581579182347-3c2dfc843e1d?auto=format&fit=crop&w=400&q=80" alt="Home Cleaning" style="width:100%; border-radius:10px;">
+      <p>Comprehensive cleaning services for all types of homes using modern and safe equipment.</p>
+      <button class="btn" onclick="document.getElementById('contact').scrollIntoView()">Book This Service</button>
+    </div>
+    <div class="service">
+      <h3>Office Cleaning</h3>
+      <img src="https://images.unsplash.com/photo-1591012911204-749ad8d18c14?auto=format&fit=crop&w=400&q=80" alt="Office Cleaning" style="width:100%; border-radius:10px;">
+      <p>We keep your office clean and organized for a healthy working environment.</p>
+      <button class="btn" onclick="document.getElementById('contact').scrollIntoView()">Book This Service</button>
+    </div>
+    <div class="service">
+      <h3>Carpet & Furniture Cleaning</h3>
+      <img src="https://images.unsplash.com/photo-1581579182675-603eeb0c0e8f?auto=format&fit=crop&w=400&q=80" alt="Carpet Cleaning" style="width:100%; border-radius:10px;">
+      <p>Deep cleaning of carpets and furniture using the latest equipment and safe materials.</p>
+      <button class="btn" onclick="document.getElementById('contact').scrollIntoView()">Book This Service</button>
+    </div>
+    <div class="service">
+      <h3>Pool Cleaning</h3>
+      <img src="https://images.unsplash.com/photo-1603734171072-bb6efc7cd17d?auto=format&fit=crop&w=400&q=80" alt="Pool Cleaning" style="width:100%; border-radius:10px;">
+      <p>Regular pool maintenance and cleaning to ensure safe and clean water.</p>
+      <button class="btn" onclick="document.getElementById('contact').scrollIntoView()">Book This Service</button>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: <a href="mailto:abdalla0zn@gmail.com">abdalla0zn@gmail.com</a></p>
+  <p>Phone: <a href="tel:+17176238443">717-623-8443</a></p>
+  <form id="contactForm">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="text" name="phone" placeholder="Phone Number" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit" class="btn">Send</button>
+    <div class="success-msg" id="successMsg">Your message has been sent successfully! We will contact you soon.</div>
+  </form>
+</section>
+
+<footer>
+  &copy; 2025 FreshNova Services. All rights reserved.<br>
+  Email: <a href="mailto:abdalla0zn@gmail.com" style="color:white;">abdalla0zn@gmail.com</a> | Phone: <a href="tel:+17176238443" style="color:white;">717-623-8443</a><br>
+  Follow us: 
+  <a href="#" style="color:white;">Facebook</a> | 
+  <a href="#" style="color:white;">Instagram</a> | 
+  <a href="#" style="color:white;">Twitter</a>
+</footer>
+
+<script>
+  // Rotating banner images
+  const banners = [
+    'https://images.unsplash.com/photo-1581579182347-3c2dfc843e1d?auto=format&fit=crop&w=1400&q=80',
+    'https://images.unsplash.com/photo-1591012911204-749ad8d18c14?auto=format&fit=crop&w=1400&q=80',
+    'https://images.unsplash.com/photo-1581579182675-603eeb0c0e8f?auto=format&fit=crop&w=1400&q=80'
+  ];
+  let index = 0;
+  setInterval(() => {
+    index = (index + 1) % banners.length;
+    document.querySelector('.banner').style.backgroundImage = `url('${banners[index]}')`;
+  }, 5000);
+
+  // Contact form submission
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    document.getElementById('successMsg').style.display = 'block';
+    this.reset();
+  });
+
+  // Scroll animations for sections
+  const sections = document.querySelectorAll('section');
+  window.addEventListener('scroll', () => {
+    sections.forEach(sec => {
+      const rect = sec.getBoundingClientRect();
+      if(rect.top < window.innerHeight - 100) {
+        sec.classList.add('visible');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
